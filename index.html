@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Design by Raymond</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid entirepage bg">
+    <nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-4 left-top">
+                    <div class="glitch" data-text="RAYMOND COX">RAYMOND COX </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-8 right-top">
+                        <button onclick="toggle()">Portfolio</button>
+                        <div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 port-images" id="portfoliodiv">
+                                <a href="https://chingu-voyage3.github.io/toucans-04/" target="_blank"><img src="/images/atomistclonepreview.jpg" class="img-responsive" /></a>
+                                <a href="https://raymond-cox.github.io/cindoco/" target="_blank"><img src="/images/cindocopreview.jpg" class="img-responsive" /></a>
+                                <a href="https://raymond-cox.github.io/fortitudephotography/" target="_blank"><img src="/images/fortitudepreview.jpg" class="img-responsive" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3 mid-left">
+                        <a href="https://medium.com/@raymondc1911" target="_blank">> Follow my Medium posts</a>
+                        <br>
+                        <a href="https://github.com/Raymond-Cox" target="_blank">> Find me on GitHub</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 bottom-left">
+                        <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+    function toggle() {
+        var x = document.getElementById("portfoliodiv");
+        if (x.style.opacity === "0") {
+            x.style.opacity = "1";
+            x.style.visibility = "visible";
+        } else {
+            x.style.opacity = "0";
+            x.style.visibility = "hidden";
+        }
+    }
+    
+    if(window.attachEvent) {
+    window.attachEvent('onload', toggle);
+} else {
+    if(window.onload) {
+        var curronload = window.onload;
+        var newonload = function(evt) {
+            curronload(evt);
+            toggle(evt);
+        };
+        window.onload = newonload;
+    } else {
+        window.onload = toggle;
+    }
+}
+</script>
+</body>
