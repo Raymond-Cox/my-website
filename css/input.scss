@@ -1,3 +1,4 @@
+
 html {
     padding: 0;
     margin: 0;
@@ -118,7 +119,7 @@ h1 {
     font-size: 2em;
     
   }
-.glitch::before,
+/*.glitch::before,
 .glitch::after {
     content: attr(data-text);
     position: absolute;
@@ -132,7 +133,7 @@ h1 {
     left: 2px;
     text-shadow: -1px 0 red;
     background: black;
-    clip: rect(44px, 450px, 56px, 0);
+    clip: rect(41px, 450px, 56px, 0);
     animation: glitch-anim-1 2s infinite linear alternate-reverse;
 }
 .glitch::after {
@@ -144,7 +145,7 @@ h1 {
 }
 @keyframes glitch-anim-1 {
     0% {
-      clip: rect(70px, 450px, 76px, 0);
+      clip: rect(18px, 450px, 76px, 0);
     }
     20% {
       clip: rect(29px, 450px, 16px, 0);
@@ -181,4 +182,45 @@ h1 {
     100% {
       clip: rect(17px, 450px, 55px, 0);
     }
+  }*/
+  @keyframes noise-anim{
+    $steps:20;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+      }
+    }
+  }
+  .glitch:after{
+    content:attr(data-text);
+    position:absolute;
+    left:2px;
+    text-shadow:-1px 0 red;
+    top:0;
+    color:white;
+    background:black;
+    overflow:hidden;
+    clip:rect(0,900px,0,0); 
+    animation:noise-anim 2s infinite linear alternate-reverse;
+  }
+  
+  @keyframes noise-anim-2{
+    $steps:20;
+    @for $i from 0 through $steps{
+      #{percentage($i*(1/$steps))}{
+        clip:rect(random(100)+px,9999px,random(100)+px,0);
+      }
+    }
+  }
+  .glitch:before{
+    content:attr(data-text);
+    position:absolute;
+    left:-2px;
+    text-shadow:1px 0 blue; 
+    top:0;
+    color:white;
+    background:black;
+    overflow:hidden;
+    clip:rect(0,900px,0,0); 
+    animation:noise-anim-2 3s infinite linear alternate-reverse;
   }
