@@ -13,6 +13,7 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    font-family: 'Share Tech', sans-serif;
 }
 
 .bg {
@@ -40,14 +41,14 @@ body {
     from {opacity: 0;}
     to {opacity: 1;}
   }
-a {
-    color: rgba(109, 204, 158, 1);
-    font-size: 2em;
+.menulinks a {
+  color: rgba(109, 204, 158, 1);
+    font-size: 2vmax;
     text-decoration: none;
     transition: color .5s ease-out;
     -webkit-transition: color .5s ease-out;
 }
-a:hover {
+.menulinks a:hover {
     color: white;
     text-decoration: none;
     transition: color .5s ease-out;
@@ -57,10 +58,7 @@ a:hover {
 ul {
     list-style-type: none;
 }
-h1 {
-    color: rgba(224, 70, 67, 1);
-    font-size: 2em;
-}
+
 .entirepage {
     height: 100%;
 }
@@ -94,95 +92,105 @@ h1 {
     overflow-y: auto;
     height: 60vh;
 }
-
-.right-top button {
+.contactinfo {
+  background-color: rgba(109, 204, 158, 1);
+  border-radius: 5px;
+  transition: visibility 1s linear, opacity 1s ease-out;
+  opacity: 0;
+  height: 15vmax;
+  position: absolute;
+  bottom: 10%;
+}
+.contactlinks {
+  color: black;
+  font-size: 1.5vmax;
+  overflow-wrap: break-word;
+}
+.emaillink {
+  font-size: 1.75vmax;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-in;
+}
+.emaillink:hover {
+  color: white;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out;
+}
+.facebook {
+  border-radius: 5px;
+  background-color: rgba(59, 89, 152, 1);
+  color: white;
+  padding: 1vmin;
+  font-size: 3.25vmin;
+  transition: color .5s ease-out, background-color .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  
+}
+.facebook:hover {
+  opacity: .8;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+}
+.github {
+  color: black;
+  font-size: 3.25vmin;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1vmin;
+  transition: opacity .5s ease-out;
+ -webkit-transition: opacity .5s ease-out;
+}
+.github:hover {
+ opacity: .8;
+ transition: opacity .5s ease-out;
+ -webkit-transition: opacity .5s ease-out;
+}
+.medium {
+  color: black;
+  font-size: 3.25vmin;
+  padding: 1vmin;
+  border-radius: 5px;
+  background-color: white;
+  transition: opacity .5s ease-out;
+ -webkit-transition: opacity .5s ease-out;
+}
+.medium:hover {
+opacity: .8;
+transition: opacity .5s ease-out;
+-webkit-transition: opacity .5s ease-out;
+}
+.contactbubbles {
+  position: absolute;
+  bottom: 5%;
+}
+button {
     background-color: inherit;
     border: none;
-    font-size: 2em;
+    font-size: 2vmax;
     color: rgba(109, 204, 158, 1);
     transition: color .5s ease-out;
     -webkit-transition: color .5s ease-out;
 }
-.right-top button:hover {
+button:hover {
     color: white;
     text-decoration: none;
     transition: color .5s ease-out;
     -webkit-transition: color .5s ease-out;
 }
-.right-top button:focus {
+button:focus {
     outline: none;
 }
 
 .glitch {
     position: relative;
     color: white;
-    font-size: 2em;
-    
+    font-size: 3vmax;
   }
-/*.glitch::before,
-.glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-.glitch::before {
-    color: white;
-    left: 2px;
-    text-shadow: -1px 0 red;
-    background: black;
-    clip: rect(41px, 450px, 56px, 0);
-    animation: glitch-anim-1 2s infinite linear alternate-reverse;
-}
-.glitch::after {
-    color: white;
-    left: -2px;
-    text-shadow: -1px 0 blue;
-    background: black;
-    animation: glitch-anim-2 2s infinite linear alternate-reverse;
-}
-@keyframes glitch-anim-1 {
-    0% {
-      clip: rect(18px, 450px, 76px, 0);
-    }
-    20% {
-      clip: rect(29px, 450px, 16px, 0);
-    }
-    40% {
-      clip: rect(76px, 450px, 3px, 0);
-    }
-    60% {
-      clip: rect(42px, 450px, 78px, 0);
-    }
-    80% {
-      clip: rect(15px, 450px, 13px, 0);
-    }
-    100% {
-      clip: rect(53px, 450px, 5px, 0);
-    }
-  }
-  @keyframes glitch-anim-2 {
-    0% {
-      clip: rect(53px, 450px, 5px, 0);
-    }
-    20% {
-      clip: rect(15px, 450px, 13px, 0);
-    }
-    40% {
-      clip: rect(72px, 450px, 64px, 0);
-    }
-    60% {
-      clip: rect(15px, 450px, 28px, 0);
-    }
-    80% {
-      clip: rect(43px, 450px, 25px, 0);
-    }
-    100% {
-      clip: rect(17px, 450px, 55px, 0);
-    }
-  }*/
+
   @keyframes noise-anim{
     $steps:20;
     @for $i from 0 through $steps{
@@ -223,4 +231,69 @@ h1 {
     overflow:hidden;
     clip:rect(0,900px,0,0); 
     animation:noise-anim-2 3s infinite linear alternate-reverse;
+  }
+
+  @media screen and (max-width: 900px) {
+    .contactinfo {
+      bottom: 6%;
+    }
+    .right-top {
+      top: 6%;
+      right: 2%;
+      text-align: right;
+  }
+    .right-top button {
+      margin-right: 5%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .glitch:after, .glitch:before {
+      animation: none;
+    }
+    .mid-left {
+      position: absolute;
+      bottom: 2%;
+      right: 2%;
+    }
+    
+  }
+
+  @media screen and (max-width: 500px) {
+    .glitch:after, .glitch:before {
+      animation: none;
+    }
+    .contactlinks {
+      font-size: 2vmax;
+    }
+    .emaillink {
+      font-size: 3vmax;
+    }
+    .facebook {
+      padding: 2vmin;
+      font-size: 4vmin;
+    }
+    .github {
+      font-size: 6vmin;
+      padding: 1vmin;
+    }
+    .medium {
+      font-size: 6vmin;
+      padding: 1vmin;
+    }
+    .contactinfo {
+      bottom: 12%;
+    }
+    button {
+      font-size: 5vmin;
+    }
+    .mid-left a {
+      font-size: 4vmin;
+    }
+    .glitch {
+      font-size: 5vmin;
+    }
+    .right-top {
+      top: 4.5%;
+      right: 2%;
+  }
   }

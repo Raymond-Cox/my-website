@@ -1,0 +1,353 @@
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; }
+
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Share Tech', sans-serif; }
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background: url("/images/backgroundimg.jpg") no-repeat center center fixed;
+  background-color: black;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-animation: myfirst 8s;
+  /* Chrome, Safari, Opera */
+  animation: myfirst 8s; }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myfirst {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+/* Standard syntax */
+@keyframes myfirst {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.menulinks a {
+  color: #6dcc9e;
+  font-size: 2vmax;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out; }
+
+.menulinks a:hover {
+  color: white;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out; }
+
+ul {
+  list-style-type: none; }
+
+.entirepage {
+  height: 100%; }
+
+.bottom-left {
+  position: absolute;
+  bottom: 2%; }
+
+.mid-left {
+  position: absolute;
+  bottom: 50%; }
+
+.right-top {
+  position: absolute;
+  top: 6%;
+  text-align: center; }
+
+.left-top {
+  position: absolute;
+  top: 5%; }
+
+.port-images img {
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  width: auto; }
+
+.port-images {
+  background-color: #6dcc9e;
+  border-radius: 5px;
+  transition: visibility 1s linear, opacity 1s ease-out;
+  opacity: 0;
+  overflow-y: auto;
+  height: 60vh; }
+
+.contactinfo {
+  background-color: #6dcc9e;
+  border-radius: 5px;
+  transition: visibility 1s linear, opacity 1s ease-out;
+  opacity: 0;
+  height: 15vmax;
+  position: absolute;
+  bottom: 10%; }
+
+.contactlinks {
+  color: black;
+  font-size: 1.5vmax;
+  overflow-wrap: break-word; }
+
+.emaillink {
+  font-size: 1.75vmax;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-in; }
+
+.emaillink:hover {
+  color: white;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out; }
+
+.facebook {
+  border-radius: 5px;
+  background-color: #3b5998;
+  color: white;
+  padding: 1vmin;
+  font-size: 3.25vmin;
+  transition: color .5s ease-out, background-color .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.facebook:hover {
+  opacity: .8;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.github {
+  color: black;
+  font-size: 3.25vmin;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1vmin;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.github:hover {
+  opacity: .8;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.medium {
+  color: black;
+  font-size: 3.25vmin;
+  padding: 1vmin;
+  border-radius: 5px;
+  background-color: white;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.medium:hover {
+  opacity: .8;
+  transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out; }
+
+.contactbubbles {
+  position: absolute;
+  bottom: 5%; }
+
+button {
+  background-color: inherit;
+  border: none;
+  font-size: 2vmax;
+  color: #6dcc9e;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out; }
+
+button:hover {
+  color: white;
+  text-decoration: none;
+  transition: color .5s ease-out;
+  -webkit-transition: color .5s ease-out; }
+
+button:focus {
+  outline: none; }
+
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 3vmax; }
+
+@keyframes noise-anim {
+  0% {
+    clip: rect(10px, 9999px, 80px, 0); }
+  5% {
+    clip: rect(61px, 9999px, 39px, 0); }
+  10% {
+    clip: rect(35px, 9999px, 93px, 0); }
+  15% {
+    clip: rect(54px, 9999px, 76px, 0); }
+  20% {
+    clip: rect(34px, 9999px, 84px, 0); }
+  25% {
+    clip: rect(83px, 9999px, 99px, 0); }
+  30% {
+    clip: rect(92px, 9999px, 31px, 0); }
+  35% {
+    clip: rect(75px, 9999px, 1px, 0); }
+  40% {
+    clip: rect(71px, 9999px, 45px, 0); }
+  45% {
+    clip: rect(100px, 9999px, 42px, 0); }
+  50% {
+    clip: rect(35px, 9999px, 2px, 0); }
+  55% {
+    clip: rect(96px, 9999px, 58px, 0); }
+  60% {
+    clip: rect(85px, 9999px, 71px, 0); }
+  65% {
+    clip: rect(60px, 9999px, 10px, 0); }
+  70% {
+    clip: rect(31px, 9999px, 22px, 0); }
+  75% {
+    clip: rect(86px, 9999px, 49px, 0); }
+  80% {
+    clip: rect(29px, 9999px, 49px, 0); }
+  85% {
+    clip: rect(74px, 9999px, 6px, 0); }
+  90% {
+    clip: rect(1px, 9999px, 62px, 0); }
+  95% {
+    clip: rect(37px, 9999px, 40px, 0); }
+  100% {
+    clip: rect(77px, 9999px, 53px, 0); } }
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse; }
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(42px, 9999px, 34px, 0); }
+  5% {
+    clip: rect(17px, 9999px, 8px, 0); }
+  10% {
+    clip: rect(24px, 9999px, 83px, 0); }
+  15% {
+    clip: rect(14px, 9999px, 74px, 0); }
+  20% {
+    clip: rect(84px, 9999px, 41px, 0); }
+  25% {
+    clip: rect(70px, 9999px, 60px, 0); }
+  30% {
+    clip: rect(44px, 9999px, 94px, 0); }
+  35% {
+    clip: rect(4px, 9999px, 78px, 0); }
+  40% {
+    clip: rect(38px, 9999px, 32px, 0); }
+  45% {
+    clip: rect(7px, 9999px, 52px, 0); }
+  50% {
+    clip: rect(54px, 9999px, 64px, 0); }
+  55% {
+    clip: rect(80px, 9999px, 76px, 0); }
+  60% {
+    clip: rect(8px, 9999px, 53px, 0); }
+  65% {
+    clip: rect(93px, 9999px, 23px, 0); }
+  70% {
+    clip: rect(55px, 9999px, 2px, 0); }
+  75% {
+    clip: rect(50px, 9999px, 15px, 0); }
+  80% {
+    clip: rect(12px, 9999px, 47px, 0); }
+  85% {
+    clip: rect(34px, 9999px, 98px, 0); }
+  90% {
+    clip: rect(92px, 9999px, 46px, 0); }
+  95% {
+    clip: rect(83px, 9999px, 9px, 0); }
+  100% {
+    clip: rect(18px, 9999px, 81px, 0); } }
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 blue;
+  top: 0;
+  color: white;
+  background: black;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse; }
+
+@media screen and (max-width: 900px) {
+  .contactinfo {
+    bottom: 6%; }
+
+  .right-top {
+    top: 6%;
+    right: 2%;
+    text-align: right; }
+
+  .right-top button {
+    margin-right: 5%; } }
+@media screen and (max-width: 768px) {
+  .glitch:after, .glitch:before {
+    animation: none; }
+
+  .mid-left {
+    position: absolute;
+    bottom: 2%;
+    right: 2%; } }
+@media screen and (max-width: 500px) {
+  .glitch:after, .glitch:before {
+    animation: none; }
+
+  .contactlinks {
+    font-size: 2vmax; }
+
+  .emaillink {
+    font-size: 3vmax; }
+
+  .facebook {
+    padding: 2vmin;
+    font-size: 4vmin; }
+
+  .github {
+    font-size: 6vmin;
+    padding: 1vmin; }
+
+  .medium {
+    font-size: 6vmin;
+    padding: 1vmin; }
+
+  .contactinfo {
+    bottom: 12%; }
+
+  button {
+    font-size: 5vmin; }
+
+  .mid-left a {
+    font-size: 4vmin; }
+
+  .glitch {
+    font-size: 5vmin; }
+
+  .right-top {
+    top: 4.5%;
+    right: 2%; } }
+
+/*# sourceMappingURL=raymondwebsite.css.map */
