@@ -13,16 +13,16 @@
 </head>
 
 <body>
-    <div class="container-fluid entirepage bg">
-    <nav>
+    
+    <div class="container-fluid entirepage bg" id="bgContainer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-12 left-top">
+                <div class="col-sm-12 left-top ztop">
                     <div class="glitch" data-text="RAYMOND COX">RAYMOND COX</div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 col-md-offset-8 col-sm-9 col-sm-offset-3 col-xs-11 col-xs-offset-1 right-top">
-                        <button onclick="toggle()" class="port">Portfolio</button>
+                    <div class="ztop col-md-4 col-md-offset-8 col-sm-9 col-sm-offset-3 col-xs-11 col-xs-offset-1 right-top">
+                        <button onclick="toggle()" id="port">Portfolio</button>
                         <div class="row">
                             <div class="col-sm-10 col-sm-offset-1 port-images" id="portfoliodiv">
                                 <a href="https://chingu-voyage3.github.io/toucans-04/" target="_blank"><img src="images/atomistclonepreview.jpg" class="img-responsive" /></a>
@@ -34,14 +34,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3 mid-left menulinks">
+                <div class="col-sm-3 mid-left menulinks ztop">
                         <a href="https://medium.com/@raymondc1911" target="_blank">> Follow my Medium posts</a>
                         <br>
                         <a href="https://github.com/Raymond-Cox" target="_blank">> Find me on GitHub</a>
                 </div>
             </div>
             <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 contactinfo" id="contactdiv">
+                    <div class="col-lg-3 col-md-4 col-sm-6 contactinfo ztop" id="contactdiv">
                         <h2 class="contactlinks">Email: <a href="mailto:raymondc1911@gmail.com" 
                            class="emaillink"  target="_top">
                                 raymondc1911@gmail.com</a></h2>
@@ -59,12 +59,14 @@
                     </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 bottom-left">
+                <div class="col-sm-4 bottom-left ztop">
                     <button onclick="togglecontact()">Work with me</button>
                 </div>
             </div>
         </div>
-    </nav>
+        <div class="codebg closed zmiddle">
+
+        </div>
 <script>
 
 /* Portfolio function */
@@ -118,6 +120,21 @@ function togglecontact() {
         window.onload = newonload;
     } else {
         window.onload = togglecontact;
+    }
+}
+/* background change function */
+var toggleBg = document.getElementById('port');
+var slider = document.querySelector('.codebg');
+
+toggleBg.addEventListener('click', toggleSlider, false);
+
+function toggleSlider(){
+    if (slider.classList.contains('opened')) {
+        slider.classList.remove('opened');
+        slider.classList.add('closed');
+    } else {
+        slider.classList.remove('closed');
+        slider.classList.add('opened');
     }
 }
 </script>
