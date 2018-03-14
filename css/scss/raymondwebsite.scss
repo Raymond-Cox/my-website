@@ -105,7 +105,7 @@ ul {
 .right-top {
     position: absolute;
     top: 6%;
-    text-align: center;
+    text-align: right;
 }
 .left-top {
     position: absolute;
@@ -127,7 +127,13 @@ ul {
     transition: visibility 1s linear, opacity 1s ease-out;
     opacity: 0;
     overflow-y: auto;
-    height: 60vh;
+    height: 70vh;
+    text-align: center;
+    color: black;
+    font-family: 'Georgia', sans-serif;
+}
+.underline {
+  text-decoration: underline;
 }
 .contactinfo {
   background-color: rgba(109, 204, 158, 1);
@@ -204,7 +210,9 @@ transition: opacity .5s ease-out;
   position: absolute;
   bottom: 5%;
 }
+
 button {
+    margin-right: 8%;
     background-color: inherit;
     border: none;
     font-size: 2vmax;
