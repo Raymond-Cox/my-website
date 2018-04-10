@@ -163,6 +163,7 @@ ul {
   transition: color .5s ease-out;
   -webkit-transition: color .5s ease-out;
 }
+
 .facebook {
   border-radius: 5px;
   background-color: rgba(59, 89, 152, 1);
@@ -290,6 +291,7 @@ button:focus {
     .right-top button {
       margin-right: 5%;
     }
+    
   }
   @media screen and (max-width: 768px) {
     .glitch:after, .glitch:before {
@@ -300,7 +302,10 @@ button:focus {
       bottom: 2%;
       right: 2%;
     }
-    
+    .contactinfo {
+      position: absolute;
+      bottom: 12%;
+    }
   }
 
   @media screen and (max-width: 500px) {
@@ -308,10 +313,11 @@ button:focus {
       animation: none;
     }
     .contactlinks {
-      font-size: 2vmax;
+      font-size: 2vmin;
     }
     .emaillink {
-      font-size: 3vmax;
+      font-size: 2vmax;
+      overflow-wrap: break-word;
     }
     .facebook {
       padding: 2vmin;
